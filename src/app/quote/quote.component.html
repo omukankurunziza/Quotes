@@ -7,12 +7,12 @@
   </h1>
   <div class="container">
     <div class="row">
-        <app-quote-form></app-quote-form>
+        <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
     </div>
   </div>
 <ul>
   <div *ngFor='let quotes of quote;let i = index'>
-    <li >{{quotes.name}}</li>
+    <li id="{{i}}" appStrikethrough>{{quotes.name}} due on {{quote.completeDate|date|uppercase}}</li>
     <button  (click)='toogleDetails(i)'>Toogle Details</button>  
     <app-quote-details *ngIf="quotes.showDescription" [quotes]='quotes' (isComplete)= 'completeQuote($event,i)'></app-quote-details>
     
