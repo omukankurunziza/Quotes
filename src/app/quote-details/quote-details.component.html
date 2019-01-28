@@ -1,5 +1,15 @@
-
+<!-- <div class="container">
+  <p>
+    <stron>Person's Name</stron>{{quote.name}}
+  </p>
+  <p>
+    <stron>Quote</stron>{{quote.quote}}
+  </p>
+  <p>
+    <stron>Author</stron>{{quote.author}}
+  </p>
+</div> -->
   <p>{{quotes.description}}</p>
-  <p>This goal will be completed in {{goal.completeDate|dateCount}} days</p>
-  <button (click) = 'quoteComplete(true)'> Complete </button>
+  <p>This quote will be completed in {{quote.completeDate|dateCount}} days</p>
+  <button class="btn btn-danger"(click) = 'quoteDelete(true)'> Delete Quote  </button>
 

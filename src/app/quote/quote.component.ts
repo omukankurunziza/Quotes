@@ -7,20 +7,24 @@ import {Quote} from '../quote'
 })
 export class QuoteComponent implements OnInit {
   quote = [
-    new Quote(1, 'Julius Malema','Mama give us a sign',new Date(2018,7,12)),
-    new Quote(2, 'Black Panther ','Wakanda Forever',new Date(2019,0,2)),
-    new Quote(3, 'The patience','am',new Date(2018,9,13) ),
-    new Quote(4, 'magic','nothing',new Date(2018,4,5)),
-    new Quote(5, 'All our dreams can come true','am',new Date(2018,6,18)),
+    new Quote('Dg', 'Julius Malema','Mama give us a sign'),
+    new Quote('ACN', 'Black Panther ','Wakanda Forever'),
+    new Quote('AM', 'The patience','am') ,
+    new Quote('MO', 'magic','nothing'),
+    new Quote('CD', 'All our dreams can come true','am'),
 
-  ]
-  toogleDetails(index){
-    this.quote[index].showDescription = !this.quote[index].showDescription;
-}
+  ];
 
-completeQuote(isComplete,index){
+//   toogleDetails(index){
+//     this.quote[index].showDescription = !this.quote[index].showDescription;
+// }
+
+DeleteQuote(isComplete,index){
   if (isComplete){
-      this.quote.splice(index,1);
+    let toDelete=confirm(`Are you sure you want to delete ${this.quote[index].name}`)
+    if(toDelete){
+      this.quote.splice(index,1)
+  }
   // constructor() { }
   // addNewQuote(quotes){
     // let quoteLength = this.quote.length;
