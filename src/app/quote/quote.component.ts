@@ -7,16 +7,26 @@ import {Quote} from '../quote'
 })
 export class QuoteComponent implements OnInit {
   quote = [
-    new Quote(1, 'Julius Malema'),
-    new Quote(2, "You have within you the strength"),
-    new Quote(3, 'The patience', ),
-    new Quote(4, "A dream doesn't become reality through magic; it takes sweat, determination and hard work"),
-    new Quote(5, "All our dreams can come true, if we have the courage to pursue them"),
+    new Quote(1, 'Julius Malema','Mama give us a sign'),
+    new Quote(2, 'Black Panther ','Wakanda Forever'),
+    new Quote(3, 'The patience','am' ),
+    new Quote(4, 'magic','nothing'),
+    new Quote(5, 'All our dreams can come true','am'),
 
   ]
-  constructor() { }
+  toogleDetails(index){
+    this.quote[index].showDescription = !this.quote[index].showDescription;
+}
+completeQuote(isComplete,index){
+  if (isComplete){
+      this.quote.splice(index,1);
+  // constructor() { }
 
-  ngOnInit() {
+  
   }
+}
 
+
+ngOnInit() {
+  }
 }

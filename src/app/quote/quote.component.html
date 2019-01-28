@@ -5,9 +5,16 @@
 <h1>
     My Quotes{{ title }}
   </h1>
+  <div class="container">
+    <div class="row">
+        <app-quote-form></app-quote-form>
+    </div>
+  </div>
 <ul>
-  <li *ngFor='let quotes of quote'>{{quotes.name}}</li>
-     
-    <!-- <app-quote-details [quote]='quote'></app-quote-details></li> -->
-    <!-- </div>  -->
+  <div *ngFor='let quotes of quote;let i = index'>
+    <li >{{quotes.name}}</li>
+    <button  (click)='toogleDetails(i)'>Toogle Details</button>  
+    <app-quote-details *ngIf="quotes.showDescription" [quotes]='quotes' (isComplete)= 'completeQuote($event,i)'></app-quote-details>
+    
+</div>
 </ul>
