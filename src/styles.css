@@ -2,7 +2,7 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 
 body{
-  background-image: url("assets/bg.jpg");
+  background-image: url("assets/back1jpeg");
   background-position: center;
   background-size: cover;
   font-family: 'Courier New', Courier, monospace;
