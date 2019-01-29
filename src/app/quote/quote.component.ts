@@ -28,7 +28,7 @@ deleteQuote(isComplete,index){
 }
  
   }
-// constructor() { }
+
 addNewQuote(quotes){
   let quoteLength = this.quote.length;
   quotes.id=quoteLength+1;
