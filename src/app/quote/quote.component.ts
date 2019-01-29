@@ -7,17 +7,17 @@ import {Quote} from '../quote'
 })
 export class QuoteComponent implements OnInit {
   quote = [
-    new Quote('Dg', 'Julius Malema','Mama give us a sign'),
-    new Quote('ACN', 'Black Panther ','Wakanda Forever'),
-    new Quote('AM', 'The patience','am') ,
-    new Quote('MO', 'magic','nothing'),
-    new Quote('CD', 'All our dreams can come true','am'),
+    new Quote(1, 'Julius Malema','Mama give us a sign'),
+    new Quote(2, 'Black Panther ','Wakanda Forever'),
+    new Quote(3, 'The patience','am') ,
+    new Quote(4, 'magic','nothing'),
+    new Quote(5, 'All our dreams can come true','am'),
 
   ];
 
-//   toogleDetails(index){
-//     this.quote[index].showDescription = !this.quote[index].showDescription;
-// }
+  toogleDetails(index){
+    this.quote[index].showDescription = !this.quote[index].showDescription;
+}
 
 DeleteQuote(isComplete,index){
   if (isComplete){
