@@ -7,11 +7,11 @@ import {Quote} from '../quote'
 })
 export class QuoteComponent implements OnInit {
   quote = [
-    new Quote(1, 'Julius Malema','Mama give us a sign'),
-    new Quote(2, 'Black Panther ','Wakanda Forever'),
+    new Quote(1, 'Mama give us a sign','Julius Malema'),
+    new Quote(2, 'Wakanda Forever','Black Panther' ),
     new Quote(3, 'The patience','am') ,
     new Quote(4, 'magic','nothing'),
-    new Quote(5, 'All our dreams can come true','am'),
+    new Quote(5, 'All our dreams can come true','Mandela'),
 
   ];
 
@@ -23,19 +23,18 @@ deleteQuote(isComplete,index){
   if (isComplete){
     let toDelete=confirm(`Are you sure you want to delete ${this.quote[index].name}`)
     if(toDelete){
-      this.quote.splice(index,1)
-  }
-  // constructor() { }
-  // addNewQuote(quotes){
-    // let quoteLength = this.quote.length;
-    // quote.id=quoteLength+1;
-    // quote.completeDate = new Date(quote.completeDate)
-    // this.quote.push(quotes)
-
+      this.quote.splice(index,1);
   }
 }
-  
  
+  }
+// constructor() { }
+addNewQuote(quotes){
+  let quoteLength = this.quote.length;
+  quotes.id=quoteLength+1;
+  this.quote.unshift(quotes)
+  
+}
 
 
 ngOnInit() {
