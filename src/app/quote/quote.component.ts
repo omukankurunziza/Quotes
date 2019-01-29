@@ -7,11 +7,11 @@ import {Quote} from '../quote'
 })
 export class QuoteComponent implements OnInit {
   quote = [
-    new Quote(1, 'Mama give us a sign','Julius Malema'),
-    new Quote(2, 'Wakanda Forever','Black Panther' ),
-    new Quote(3, 'The patience','am') ,
-    new Quote(4, 'magic','nothing'),
-    new Quote(5, 'All our dreams can come true','Mandela'),
+    new Quote(1, 'Mama give us a sign','Julius Malema',new Date(2018,2,24)),
+    new Quote(2, 'Wakanda Forever','Black Panther',new Date(2018,11,24) ),
+    new Quote(3, 'The patience','am',new Date(2019,0,20)) ,
+    new Quote(4, 'magic','nothing',new Date(2019,0,14)),
+    new Quote(5, 'All our dreams can come true','Mandela',new Date(2018,6,24)),
 
   ];
 

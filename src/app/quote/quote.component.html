@@ -16,8 +16,8 @@
   
 <ul>
   <div *ngFor='let quotes of quote;let i = index'>
-    <li id="{{i}}" appStrikethrough>{{quotes.name}}  {{quotes.completeDate|date|uppercase}}</li>
-    <button  (click)='toogleDetails(i)'>Toogle Details</button>  
+    <li >{{quotes.name}}</li>
+    <button  (click)='toogleDetails(i)'>Author Details</button>  
     <app-quote-details *ngIf="quotes.showDescription" [quotes]='quotes' (isComplete)= 'deleteQuote($event,i)'></app-quote-details>
     
 </div>
