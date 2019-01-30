@@ -6,14 +6,17 @@
 ## Description
 Quotes: a web application that gathers quotes from various individuals past and present.
 
-Visitors to the site are encourage to post their favourite quotes by historical and/or present figures. This is then made visible to others who can either upvote or downvote and the quote with the highest number of vote gets highlighted.
-
-Setup/Installation Requirements
+Visitors to the site are encourage to post their favourite quotes by historical and/or present figures. This is then made visible to others who can either upvote or downvote 
+### Setup/Installation Requirements
 There are no installation requirments needed... with your web browser you can be abe to access the site.
 
-Known Bugs
+### Known Bugs
 There is a small issue that will be fixed in the coming days... an auto-refresh. clearing the fields as soon as the quote is submitted. and highlighting the quote with the highest number of votes.
-
+## link to live site on GitHub pages
+https://omukankurunziza.github.io/Quotes/
+## BDD
+Quotes: a web application, user can post their quotes and votes them and user can votes for the current quotes
+user can delete some quotes he/she don't like 
 ## Technologies Used
 * HTML
 * CSS
